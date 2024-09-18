@@ -445,8 +445,8 @@ body {
         <div class="video-card">
             <img src="https://via.placeholder.com/600x450" alt="Video Thumbnail" class="video-card__img">
             <footer class="video-card__footer">
-                <span>Video Title</span>
-                <span>Video Description</span>
+                <span>Newest Song</span>
+                <span>Oingus Boingus</span>
             </footer>
             <div class="video-card__action">
                 <svg viewBox="0 0 24 24">
@@ -474,7 +474,7 @@ body {
                 <hr />
                 <div class="creator">
                     <div class="wrapper">
-                        <img src="https://via.placeholder.com/50" alt="Creator" />
+                        <img src="purple border.png" alt="Creator" />
                     </div>
                     <p><ins>Creation of</ins> Quiiigz</p>
                 </div>
