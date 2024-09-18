@@ -405,6 +405,44 @@ body {
 <div class="container">
     <!-- Featured Cards Section -->
     <div class="card-container">
+
+        <!-- Kickstarter Card -->
+        <div class="kickstarter-card">
+            <div class="wrapper">
+                <img src="assets/kickstarter.jpg" class="cover-image" />
+            </div>
+            <img src="assets/character.png" class="character" />
+            <h1 class="title">Kickstarter</h1>
+        </div>
+
+        <!-- Skool Community Card -->
+        <div class="nft">
+            <div class="main">
+                <img class="tokenImage" src="skool logo.png" alt="Skool Community" />
+                <h2>Join Skool Community</h2>
+                <p class="description">Connect with like-minded individuals in our vibrant community.</p>
+                <div class="tokenInfo">
+                    <div class="price">
+                        <ins>◘</ins>
+                        <p>0.00042 ETH</p>
+                    </div>
+                    <div class="duration">
+                        <ins>◷</ins>
+                        <p>11 days left</p>
+                    </div>
+                </div>
+                <hr />
+                <div class="creator">
+                    <div class="wrapper">
+                        <img src="purple border.png" alt="Creator" />
+                    </div>
+                    <p><ins>Creation of</ins> Quiiigz</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
         <!-- Quiiigz Card -->
         <div class="quiiigz-card">
             <div class="card-content">
@@ -432,18 +470,9 @@ body {
             </div>
         </div>
 
-        <!-- Kickstarter Card -->
-        <div class="kickstarter-card">
-            <div class="wrapper">
-                <img src="assets/kickstarter.jpg" class="cover-image" />
-            </div>
-            <img src="assets/character.png" class="character" />
-            <h1 class="title">Kickstarter</h1>
-        </div>
-
-        <!-- YouTube Video Card -->
+           <!-- YouTube Video Card -->
         <div class="video-card">
-            <img src="https://via.placeholder.com/600x450" alt="Video Thumbnail" class="video-card__img">
+            <img src="https://www.youtube.com/watch?v=VxHpAxcY4s0" alt="Video Thumbnail" class="video-card__img">
             <footer class="video-card__footer">
                 <span>Newest Song</span>
                 <span>Oingus Boingus</span>
@@ -454,34 +483,6 @@ body {
                 </svg>
             </div>
         </div>
-
-        <!-- Skool Community Card -->
-        <div class="nft">
-            <div class="main">
-                <img class="tokenImage" src="https://via.placeholder.com/300x250" alt="Skool Community" />
-                <h2>Join Skool Community</h2>
-                <p class="description">Connect with like-minded individuals in our vibrant community.</p>
-                <div class="tokenInfo">
-                    <div class="price">
-                        <ins>◘</ins>
-                        <p>0.031 ETH</p>
-                    </div>
-                    <div class="duration">
-                        <ins>◷</ins>
-                        <p>11 days left</p>
-                    </div>
-                </div>
-                <hr />
-                <div class="creator">
-                    <div class="wrapper">
-                        <img src="purple border.png" alt="Creator" />
-                    </div>
-                    <p><ins>Creation of</ins> Quiiigz</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- JavaScript for video and audio control -->
 <script>
