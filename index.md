@@ -78,7 +78,7 @@ body {
     background-repeat: no-repeat;
     transition: background-size 0.8s ease;
     background-image: url('assets/robModern.jpg');
-    background-color: rgba(0, 0, 0, 0.6); /* Added this line */
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .quiiigz-card .card-content:hover {
@@ -147,31 +147,112 @@ body {
 .quiiigz-card .icon-primal { color: #FF1493 !important; }
 
 /* Styles specific to the Kickstarter card */
-.kickstarter-card {
-    --card-height: 300px;
-    --card-width: calc(var(--card-height) / 1.5);
-    width: var(--card-width);
-    height: var(--card-height);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0 36px;
-    perspective: 2500px;
-    margin: 0 50px;
+:root {
+  --card-height: 300px;
+  --card-width: calc(var(--card-height) / 1.5);
 }
 
-/* Added styles for Kickstarter card */
+.kickstarter-card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+
 .kickstarter-card .wrapper {
-    background-color: rgba(40, 44, 52, 0.8);
-    border-radius: .7rem;
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.kickstarter-card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.kickstarter-card .wrapper::before,
+.kickstarter-card .wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+.kickstarter-card .wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.kickstarter-card .wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.kickstarter-card:hover .wrapper::before,
+.kickstarter-card:hover .wrapper::after {
+  opacity: 1;
+}
+
+.kickstarter-card:hover .wrapper::after {
+  height: 120px;
+}
+
+.kickstarter-card .cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .kickstarter-card .title {
-    color: #fff;
+  width: 100%;
+  transition: transform 0.5s;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-/* ... (rest of the Kickstarter card styles remain unchanged) ... */
+.kickstarter-card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.kickstarter-card .character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.kickstarter-card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
 
 /* Styles specific to the YouTube Video card */
 .video-card {
@@ -184,18 +265,16 @@ body {
     overflow: hidden;
     color: #000;
     transform: translateZ(0);
-    background-color: rgba(40, 44, 52, 0.8); /* Added this line */
+    background-color: rgba(40, 44, 52, 0.8);
 }
 
 .video-card__footer {
-    color: #fff; /* Added this line */
+    color: #fff;
 }
 
 .video-card__action svg {
-    fill: #fff; /* Added this line */
+    fill: #fff;
 }
-
-/* ... (rest of the YouTube Video card styles remain unchanged) ... */
 
 /* Styles for the Skool community card */
 .nft {
@@ -213,7 +292,121 @@ body {
     transition: .5s all;
 }
 
-/* ... (rest of the Skool community card styles remain unchanged) ... */
+.nft hr {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #88888855;
+    margin-top: 0;
+}
+
+.nft ins {
+    text-decoration: none;
+}
+
+.nft .main {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 1rem;
+}
+
+.nft .main .tokenImage {
+    border-radius: .5rem;
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.nft .main .description {
+    margin: .5rem 0;
+    color: #a89ec9;
+}
+
+.nft .main .tokenInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nft .main .tokenInfo .price {
+    display: flex;
+    align-items: center;
+    color: #ee83e5;
+    font-weight: 700;
+}
+
+.nft .main .tokenInfo .price ins {
+    margin-left: -.3rem;
+    margin-right: .5rem;
+}
+
+.nft .main .tokenInfo .duration {
+    display: flex;
+    align-items: center;
+    color: #a89ec9;
+    margin-right: .2rem;
+}
+
+.nft .main .tokenInfo .duration ins {
+    margin: .5rem;
+    margin-bottom: .4rem;
+}
+
+.nft .main .creator {
+    display: flex;
+    align-items: center;
+    margin-top: .2rem;
+    margin-bottom: -.3rem;
+}
+
+.nft .main .creator ins {
+    color: #a89ec9;
+    text-decoration: none;
+}
+
+.nft .main .creator .wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ffffff22;
+    padding: .3rem;
+    margin: 0;
+    margin-right: .5rem;
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 4px #000000aa;
+}
+
+.nft .main .creator .wrapper img {
+    border-radius: 100%;
+    border: 1px solid #ffffff22;
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    margin: 0;
+}
+
+.nft::before {
+    position: fixed;
+    content: "";
+    box-shadow: 0 0 100px 40px #ffffff08;
+    top: -10%;
+    left: -100%;
+    transform: rotate(-45deg);
+    height: 60rem;
+    transition: .7s all;
+}
+
+.nft:hover {
+    border: 1px solid #ffffff44;
+    box-shadow: 0 7px 50px 10px #000000aa;
+    transform: scale(1.015);
+    filter: brightness(1.3);
+}
+
+.nft:hover::before {
+    filter: brightness(.5);
+    top: -100%;
+    left: 200%;
+}
 
 /* Media queries for responsive layout */
 @media (min-width: 768px) {
@@ -315,9 +508,9 @@ body {
         <!-- Kickstarter Card -->
         <div class="kickstarter-card">
             <div class="wrapper">
-                <img src="assets/kickstarter.jpg" class="cover-image" />
+                <img src="assets/kickstarter.jpg" class="cover-image" alt="Kickstarter Cover" />
             </div>
-            <img src="assets/character.png" class="character" />
+            <img src="assets/character.png" class="character" alt="Character" />
             <h1 class="title">Kickstarter</h1>
         </div>
 
@@ -393,4 +586,50 @@ body {
 
 <!-- JavaScript for video and audio control -->
 <script>
-document.addEventListener('DOMContentLoaded', (event)
+document.addEventListener('DOMContentLoaded', (event) => {
+    const video = document.getElementById('bg-video');
+    const audioControl = document.getElementById('audio-control');
+
+    // Improved error handling
+    video.addEventListener('error', function(e) {
+        console.error('Error loading video:', e);
+        console.log('Video error code:', video.error.code);
+        console.log('Video error message:', video.error.message);
+        // Fallback to poster image
+        video.style.display = 'none';
+    });
+
+    // Check if video can play through
+    video.addEventListener('canplaythrough', function() {
+        console.log('Video can play through');
+    });
+
+    // Audio control
+    if (audioControl) {
+        audioControl.addEventListener('click', function() {
+            if (video.muted) {
+                video.muted = false;
+                audioControl.textContent = 'Mute';
+            } else {
+                video.muted = true;
+                audioControl.textContent = 'Unmute';
+            }
+        });
+    }
+
+    // Log video loading progress
+    video.addEventListener('loadedmetadata', function() {
+        console.log('Video metadata loaded');
+    });
+
+    video.addEventListener('loadeddata', function() {
+        console.log('Video data loaded');
+    });
+
+    // Attempt to play the video
+    video.play().catch(error => {
+        console.error("Error attempting to play video:", error);
+        // Fallback handled in the 'error' event listener
+    });
+});
+</script>
