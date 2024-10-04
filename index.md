@@ -313,6 +313,12 @@ body {
     flex: 1;
 }
 
+.nft .main .content .store-name {
+    font-size: 12px;
+    color: #a8a8a8;
+    margin: 0 0 2px 0;
+}
+
 .nft .main .content h2 {
     margin: 0 0 5px 0;
     font-size: 18px;
@@ -481,10 +487,11 @@ body {
         <!-- Skool Community Card -->
 <div class="nft">
     <div class="main">
-        <img class="tokenImage" src="skool logo.png" alt="Skool Community" />
+        <img class="tokenImage" src="skool logo.png" alt="Placid Palms" />
         <div class="content">
-            <h2>Skool Community</h2>
-            <p class="description">Connect with like-minded individuals</p>
+            <p class="store-name">Skool Community</p>
+            <h2>Placid Palms</h2>
+            <p class="description">Connect. Create. Explore.</p>
         </div>
         <button class="action">Open</button>
     </div>
