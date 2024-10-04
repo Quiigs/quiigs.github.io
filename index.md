@@ -491,7 +491,7 @@ body {
         <div class="content">
             <p class="store-name">Skool Community</p>
             <h2>Placid Palms</h2>
-            <p class="description">Connect. Create. Explore.</p>
+            <p class="description">Connect. Create. Exp. Lore.</p>
         </div>
         <button class="action">Open</button>
     </div>
