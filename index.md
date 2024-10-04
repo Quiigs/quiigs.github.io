@@ -279,109 +279,66 @@ body {
 /* Styles for the Skool community card */
 .nft {
     user-select: none;
-    max-width: 300px;
-    margin: 5rem auto;
+    width: 400px;
+    margin: 10px auto;
+    padding: 15px;
     border: 1px solid #ffffff22;
     background-color: #282c34;
     background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
     box-shadow: 0 7px 20px 5px #00000088;
-    border-radius: .7rem;
+    border-radius: 15px;
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
     overflow: hidden;
     transition: .5s all;
-}
-
-.nft hr {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #88888855;
-    margin-top: 0;
-}
-
-.nft ins {
-    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 .nft .main {
     display: flex;
-    flex-direction: column;
-    width: 90%;
-    padding: 1rem;
+    align-items: center;
+    width: 100%;
 }
 
 .nft .main .tokenImage {
-    border-radius: .5rem;
-    max-width: 100%;
-    height: 250px;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    margin-right: 15px;
     object-fit: cover;
 }
 
-.nft .main .description {
-    margin: .5rem 0;
-    color: #a89ec9;
+.nft .main .content {
+    flex: 1;
 }
 
-.nft .main .tokenInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nft .main .content h2 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #ffffff;
 }
 
-.nft .main .tokenInfo .price {
-    display: flex;
-    align-items: center;
-    color: #ee83e5;
-    font-weight: 700;
-}
-
-.nft .main .tokenInfo .price ins {
-    margin-left: -.3rem;
-    margin-right: .5rem;
-}
-
-.nft .main .tokenInfo .duration {
-    display: flex;
-    align-items: center;
-    color: #a89ec9;
-    margin-right: .2rem;
-}
-
-.nft .main .tokenInfo .duration ins {
-    margin: .5rem;
-    margin-bottom: .4rem;
-}
-
-.nft .main .creator {
-    display: flex;
-    align-items: center;
-    margin-top: .2rem;
-    margin-bottom: -.3rem;
-}
-
-.nft .main .creator ins {
-    color: #a89ec9;
-    text-decoration: none;
-}
-
-.nft .main .creator .wrapper {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ffffff22;
-    padding: .3rem;
+.nft .main .content .description {
     margin: 0;
-    margin-right: .5rem;
-    border-radius: 100%;
-    box-shadow: inset 0 0 0 4px #000000aa;
+    font-size: 14px;
+    color: #a89ec9;
 }
 
-.nft .main .creator .wrapper img {
-    border-radius: 100%;
-    border: 1px solid #ffffff22;
-    width: 2rem;
-    height: 2rem;
-    object-fit: cover;
-    margin: 0;
+.nft .main .action {
+    background-color: #0A84FF;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.nft .main .action:hover {
+    background-color: #0071e3;
 }
 
 .nft::before {
@@ -406,6 +363,13 @@ body {
     filter: brightness(.5);
     top: -100%;
     left: 200%;
+}
+
+/* Hide unnecessary elements */
+.nft hr,
+.nft .tokenInfo,
+.nft .creator {
+    display: none;
 }
 
 /* Media queries for responsive layout */
@@ -515,30 +479,16 @@ body {
         </div>
 
         <!-- Skool Community Card -->
-        <div class="nft">
-            <div class="main">
-                <img class="tokenImage" src="skool logo.png" alt="Skool Community" />
-                <h2>Join Skool Community</h2>
-                <p class="description">Connect with like-minded individuals in our vibrant community.</p>
-                <div class="tokenInfo">
-                    <div class="price">
-                        <ins>◘</ins>
-                        <p>0.00042 ETH</p>
-                    </div>
-                    <div class="duration">
-                        <ins>◷</ins>
-                        <p>11 days left</p>
-                    </div>
-                </div>
-                <hr />
-                <div class="creator">
-                    <div class="wrapper">
-                        <img src="purple border.png" alt="Creator" />
-                    </div>
-                    <p><ins>Creation of</ins> Quiiigz</p>
-                </div>
-            </div>
+<div class="nft">
+    <div class="main">
+        <img class="tokenImage" src="skool logo.png" alt="Skool Community" />
+        <div class="content">
+            <h2>Skool Community</h2>
+            <p class="description">Connect with like-minded individuals</p>
         </div>
+        <button class="action">Open</button>
+    </div>
+</div>
 
         <!-- Quiiigz Card -->
         <div class="quiiigz-card">
