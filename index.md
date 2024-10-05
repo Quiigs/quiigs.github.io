@@ -192,11 +192,12 @@ body {
 :root {
   --card-height: 300px;
   --card-width: calc(var(--card-height) / 1.5);
+  --hover-space: 150px; /* Adjust this value based on the character's height */
 }
 
 .kickstarter-card {
   width: var(--card-width);
-  height: var(--card-height);
+  height: calc(var(--card-height) + var(--hover-space));
   position: relative;
   display: flex;
   justify-content: center;
@@ -210,7 +211,8 @@ body {
   transition: all 0.5s;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: var(--card-height);
+  bottom: 0;
   z-index: -1;
   overflow: hidden;
 }
@@ -292,9 +294,9 @@ body {
   opacity: 0;
   transition: all 0.5s;
   position: absolute;
-  bottom: 0;
+  bottom: var(--card-height);
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(100%);
   z-index: 1;
 }
 
