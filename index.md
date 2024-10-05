@@ -144,11 +144,14 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-content: flex-start; /* Ensures columns start from the left */
     height: calc(100% - 70px); /* Adjust based on your card's padding and title height */
     justify-content: flex-start;
     align-items: flex-start;
     gap: 15px;
     padding-top: 50px; /* Add top padding to avoid overlapping with title */
+    padding-left: 20px; /* Align with the title */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
 
 .quiiigz-card .icons a {
