@@ -432,7 +432,7 @@ body {
     }
     
     .quiiigz-card .icon {
-        font-size: 22px;
+        font-size: 26px;
     }
 }
 
@@ -456,7 +456,7 @@ body {
     }
 
     .quiiigz-card .icon {
-        font-size: 26px;
+        font-size: 28px;
     }
 }
 
