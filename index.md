@@ -269,7 +269,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center; /* Center the image */
-  transform: scale(1.2); /* Zoom in the image slightly */
+  transform: scale(1.23); /* Increased zoom by 3% */
 }
 
 .kickstarter-card .title {
@@ -300,7 +300,7 @@ body {
 
 .kickstarter-card:hover .character {
   opacity: 1;
-  transform: translate3d(50%, -30%, 100px);
+  transform: translate3d(-50%, -30%, 100px); /* Centered horizontally */
 }
 
 /* Styles specific to the YouTube Video card */
