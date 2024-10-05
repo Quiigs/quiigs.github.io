@@ -35,6 +35,38 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Styles specific for top bar header */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Mostly black with transparency */
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar .container {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-bar .logo {
+    height: 30px; /* Adjust as needed */
+    margin-right: 15px;
+}
+
+.top-bar .site-name {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0;
+}
+    
 /* Styles for card container */
 .card-container {
     display: flex;
@@ -474,6 +506,14 @@ body {
 <div class="container">
     <!-- Featured Cards Section -->
     <div class="card-container">
+
+<!-- Top Bar Header -->
+<header class="top-bar">
+    <div class="container">
+        <img src="PlacidPalmsLogo.png" alt="Your Logo" class="logo">
+        <h1 class="site-name">Placid Palms</h1>
+    </div>
+</header>
 
         <!-- Kickstarter Card -->
         <div class="kickstarter-card">
