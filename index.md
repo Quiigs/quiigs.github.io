@@ -149,7 +149,6 @@ body {
     align-items: flex-start;
     gap: 15px;
     padding-top: 50px; /* Add top padding to avoid overlapping with title */
-    justify-items: center;
 }
 
 .quiiigz-card .icons a {
