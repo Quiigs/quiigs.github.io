@@ -54,6 +54,7 @@ body {
     padding: 10px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    justify-content: flex-start; /* Aligns content to the left */
 }
 
 .top-bar .logo {
@@ -284,6 +285,11 @@ body {
   font-size: 24px;
   font-weight: bold;
   z-index: 2; /* Ensure title is in front of the character */
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .kickstarter-card:hover .title {
