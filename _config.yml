@@ -5,6 +5,9 @@ description: Placid Palms is a space where creativity flows, wisdom reawakens, a
 # baseurl: "/blog" # the subpath of your site, e.g. /blog
 # url: "https://example.com" # the base hostname & protocol for your site, e.g. http://example.com
 
+# Add your logo image here
+logo: /assets/PlacidPalmsLogo.png
+
 plugins:
   - jekyll-seo-tag
 
