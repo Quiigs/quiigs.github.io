@@ -105,6 +105,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 20px; /* Add padding to create space for icons */
     background-size: 110%;
     background-position: center;
     background-repeat: no-repeat;
@@ -127,6 +128,7 @@ body {
     margin: 0;
     font-size: 1.2rem;
     font-weight: 500;
+    z-index: 2; /* Ensure title is above icons */
 }
 
 .quiiigz-card:hover h2 {
@@ -135,15 +137,18 @@ body {
 
 /* Styles for icons in Quiiigz card */
 .quiiigz-card .icons {
-    position: absolute;
+    position: relative; /* Change from absolute to relative */
     top: 20px;
     left: 20px;
     bottom: 20px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    height: calc(100% - 70px); /* Adjust based on your card's padding and title height */
     justify-content: flex-start;
     align-items: flex-start;
     gap: 15px;
+    padding-top: 50px; /* Add top padding to avoid overlapping with title */
     justify-items: center;
 }
 
