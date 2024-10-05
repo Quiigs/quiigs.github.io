@@ -192,7 +192,7 @@ body {
 :root {
   --card-height: 300px;
   --card-width: calc(var(--card-height) / 1.5);
-  --hover-space: 150px; /* Adjust this value based on the character's height */
+  --hover-space: 100px; /* Adjust this value based on the character's height */
 }
 
 .kickstarter-card {
@@ -270,7 +270,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center; /* Center the image */
   transform: scale(1.23); /* Increased zoom by 3% */
 }
 
@@ -290,19 +289,19 @@ body {
 }
 
 .kickstarter-card .character {
-  width: 70%; /* Adjust as needed */
+  width: 100%;
   opacity: 0;
   transition: all 0.5s;
   position: absolute;
   bottom: var(--card-height);
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
+  left: 0;
+  transform: translateY(100%);
   z-index: 1;
 }
 
 .kickstarter-card:hover .character {
   opacity: 1;
-  transform: translate3d(-50%, -0%, 100px); /* Centered horizontally */
+  transform: translateY(70%); /* Adjust this value to control how high the character rises */
 }
 
 /* Styles specific to the YouTube Video card */
