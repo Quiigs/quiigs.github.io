@@ -33,6 +33,7 @@ body {
     user-select: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding-top: 60px; /* Adjust based on your top bar height */
 }
 
 /* Styles specific for top bar header */
@@ -41,7 +42,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Mostly black with transparency */
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
     z-index: 1000;
@@ -57,7 +58,7 @@ body {
 }
 
 .top-bar .logo {
-    height: 30px; /* Adjust as needed */
+    height: 30px;
     margin-right: 15px;
 }
 
@@ -66,15 +67,19 @@ body {
     font-size: 18px;
     margin: 0;
 }
-    
+
 /* Styles for card container */
 .card-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
     padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.kickstarter-card, .nft, .quiiigz-card, .video-card {
+    margin-bottom: 20px;
 }
 
 /* Styles specific to the Quiiigz card */
@@ -364,11 +369,11 @@ body {
 }
 
 .nft .main .action {
-    background-color: #4a4a5a; /* Light grey-purple */
+    background-color: #4a4a5a;
     color: white;
-    padding: 6px 16px; /* Reduced padding to make it smaller */
-    border-radius: 16px; /* Slightly reduced to match smaller size */
-    font-size: 14px; /* Reduced font size */
+    padding: 6px 16px;
+    border-radius: 16px;
+    font-size: 14px;
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -376,7 +381,7 @@ body {
 }
 
 .nft .main .action:hover {
-    background-color: #5a5a6a; /* Slightly lighter on hover */
+    background-color: #5a5a6a;
 }
 
 .nft::before {
@@ -410,8 +415,61 @@ body {
     display: none;
 }
 
+/* Styles for background video */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    object-fit: cover;
+}
+
+#audio-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
 /* Media queries for responsive layout */
+@media (max-width: 767px) {
+    body {
+        padding-top: 50px;
+    }
+
+    .top-bar .container {
+        padding: 5px 10px;
+    }
+
+    .top-bar .logo {
+        height: 25px;
+    }
+
+    .top-bar .site-name {
+        font-size: 16px;
+    }
+}
+
 @media (min-width: 768px) {
+    .card-container {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card-container > *:first-child {
+        margin-top: auto;
+    }
+
     .quiiigz-card, .video-card, .kickstarter-card, .nft {
         width: calc(50% - 20px);
         max-width: 450px;
@@ -428,6 +486,10 @@ body {
 }
 
 @media (min-width: 1024px) {
+    .card-container {
+        justify-content: flex-start;
+    }
+
     .quiiigz-card, .video-card, .kickstarter-card, .nft {
         width: calc(33.333% - 20px);
         max-width: 550px;
@@ -465,31 +527,6 @@ body {
         font-size: 30px;
     }
 }
-
-/* Styles for background video */
-#bg-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1000;
-    object-fit: cover;
-}
-
-#audio-control {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-}
 </style>
 
 <!-- Video background element -->
@@ -507,13 +544,13 @@ body {
     <!-- Featured Cards Section -->
     <div class="card-container">
 
-<!-- Top Bar Header -->
-<header class="top-bar">
-    <div class="container">
-        <img src="assets/PlacidPalmsLogo.png" alt="Your Logo" class="logo">
-        <h1 class="site-name">Placid Palms</h1>
-    </div>
-</header>
+        <!-- Top Bar Header -->
+        <header class="top-bar">
+            <div class="container">
+                <img src="assets/PlacidPalmsLogo.png" alt="Your Logo" class="logo">
+                <h1 class="site-name">Placid Palms</h1>
+            </div>
+        </header>
 
         <!-- Kickstarter Card -->
         <div class="kickstarter-card">
@@ -525,17 +562,17 @@ body {
         </div>
 
         <!-- Skool Community Card -->
-<div class="nft">
-    <div class="main">
-        <img class="tokenImage" src="assets/skool logo.png" alt="Placid Palms" />
-        <div class="content">
-            <p class="store-name">Skool Community</p>
-            <h2>Placid Palms</h2>
-            <p class="description">Connect. Create. Exp. Lore.</p>
+        <div class="nft">
+            <div class="main">
+                <img class="tokenImage" src="assets/skool logo.png" alt="Placid Palms" />
+                <div class="content">
+                    <p class="store-name">Skool Community</p>
+                    <h2>Placid Palms</h2>
+                    <p class="description">Connect. Create. Exp. Lore.</p>
+                </div>
+                <button class="action">Open</button>
+            </div>
         </div>
-        <button class="action">Open</button>
-    </div>
-</div>
 
         <!-- Quiiigz Card -->
         <div class="quiiigz-card">
