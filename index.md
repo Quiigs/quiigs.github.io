@@ -597,19 +597,19 @@ body {
             </div>
         </div>
 
-        <!-- YouTube Video Card -->
-        <div class="video-card">
-            <img src="assets/video-thumbnail.jpg" alt="Video Thumbnail" class="video-card__img">
-            <footer class="video-card__footer">
-                <span>Newest Song</span>
-                <span>Oingus Boingus</span>
-            </footer>
-            <div class="video-card__action">
-                <svg viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
-                </svg>
-            </div>
-        </div>
+        <div class="video-card" data-video-id="bg1N0Pu-woQ">
+    <img src="" alt="Video Thumbnail" class="video-card__img">
+    <footer class="video-card__footer">
+        <span>Newest Song</span>
+        <span>bREATHE</span>
+    </footer>
+    <div class="video-card__action">
+        <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+        </svg>
+    </div>
+</div>
+</div>
 
     </div>
 </div>
