@@ -193,6 +193,7 @@ body {
   --card-height: 300px;
   --card-width: calc(var(--card-height) / 1.5);
   --hover-space: 100px; /* Adjust this value based on the character's height */
+  --kickstarter-green: #05ce78; /* Kickstarter green color */
 }
 
 .kickstarter-card {
@@ -270,7 +271,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.23); /* Increased zoom by 3% */
+  transform: scale(1.23) translateX(5%); /* Zoom and move 5% to the right */
 }
 
 .kickstarter-card .title {
@@ -279,9 +280,10 @@ body {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  color: white;
+  color: var(--kickstarter-green); /* Changed to Kickstarter green */
   font-size: 24px;
   font-weight: bold;
+  z-index: 2; /* Ensure title is in front of the character */
 }
 
 .kickstarter-card:hover .title {
