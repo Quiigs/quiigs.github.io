@@ -518,7 +518,7 @@ body {
         <!-- Kickstarter Card -->
         <div class="kickstarter-card">
             <div class="wrapper">
-                <img src="assets/kickstarter.jpg" class="cover-image" alt="Kickstarter Cover" />
+                <img src="assets/kickstarter.png" class="cover-image" alt="Kickstarter Cover" />
             </div>
             <img src="assets/character.png" class="character" alt="Character" />
             <h1 class="title">Kickstarter</h1>
