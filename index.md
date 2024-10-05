@@ -332,11 +332,11 @@ body {
 }
 
 .nft .main .action {
-    background-color: #0A84FF;
+    background-color: #4a4a5a; /* Light grey-purple */
     color: white;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 16px;
+    padding: 6px 16px; /* Reduced padding to make it smaller */
+    border-radius: 16px; /* Slightly reduced to match smaller size */
+    font-size: 14px; /* Reduced font size */
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -344,7 +344,7 @@ body {
 }
 
 .nft .main .action:hover {
-    background-color: #0071e3;
+    background-color: #5a5a6a; /* Slightly lighter on hover */
 }
 
 .nft::before {
