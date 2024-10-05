@@ -510,7 +510,7 @@ body {
 <!-- Top Bar Header -->
 <header class="top-bar">
     <div class="container">
-        <img src="PlacidPalmsLogo.png" alt="Your Logo" class="logo">
+        <img src="assets/PlacidPalmsLogo.png" alt="Your Logo" class="logo">
         <h1 class="site-name">Placid Palms</h1>
     </div>
 </header>
