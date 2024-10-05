@@ -144,6 +144,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: flex-start; /* Align items to the left */
     align-content: flex-start; /* Ensures columns start from the left */
     height: calc(100% - 70px); /* Adjust based on your card's padding and title height */
     justify-content: flex-start;
