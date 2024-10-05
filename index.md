@@ -597,20 +597,16 @@ body {
             </div>
         </div>
 
-        <div class="video-card" data-video-id="bg1N0Pu-woQ">
-    <img src="" alt="Video Thumbnail" class="video-card__img">
-    <footer class="video-card__footer">
-        <span>Newest Song</span>
-        <span>bREATHE</span>
-    </footer>
-    <div class="video-card__action">
+    <div class="card video-card" data-video-id="bg1N0Pu-woQ">
+        <img class="card__img" src="" alt="Video Thumbnail">
+        <footer class="card__footer">
+            <span></span>
+            <span></span>
+        </footer>
+    <div class="card__action">
         <svg viewBox="0 0 24 24">
             <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
         </svg>
-    </div>
-</div>
-</div>
-
     </div>
 </div>
 
