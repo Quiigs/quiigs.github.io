@@ -152,7 +152,6 @@ body {
     align-items: flex-start;
     gap: 15px;
     padding-top: 50px; /* Add top padding to avoid overlapping with title */
-    padding-left: 20px; /* Align with the title */
     overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
 
