@@ -210,7 +210,9 @@ body {
   transition: all 0.5s;
   position: absolute;
   width: 100%;
+  height: 100%;
   z-index: -1;
+  overflow: hidden;
 }
 
 .kickstarter-card:hover .wrapper {
@@ -266,6 +268,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center; /* Center the image */
+  transform: scale(1.2); /* Zoom in the image slightly */
 }
 
 .kickstarter-card .title {
@@ -284,16 +288,19 @@ body {
 }
 
 .kickstarter-card .character {
-  width: 100%;
+  width: 70%; /* Adjust as needed */
   opacity: 0;
   transition: all 0.5s;
   position: absolute;
-  z-index: -1;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .kickstarter-card:hover .character {
   opacity: 1;
-  transform: translate3d(0%, -30%, 100px);
+  transform: translate3d(50%, -30%, 100px);
 }
 
 /* Styles specific to the YouTube Video card */
@@ -435,6 +442,14 @@ body {
     .quiiigz-card .icon {
         font-size: 26px;
     }
+
+    :root {
+    --card-height: 400px; /* Slightly smaller on mobile */
+  }
+    
+    .kickstarter-card {
+    margin: 0 20px;
+  }
 }
 
 @media (min-width: 1024px) {
