@@ -136,12 +136,14 @@ body {
 /* Styles for icons in Quiiigz card */
 .quiiigz-card .icons {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     left: 20px;
-    right: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-    gap: 10px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
     justify-items: center;
 }
 
@@ -157,7 +159,7 @@ body {
 }
 
 .quiiigz-card .icon {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 /* Individual icon styles */
