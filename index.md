@@ -527,7 +527,7 @@ body {
         <!-- Skool Community Card -->
 <div class="nft">
     <div class="main">
-        <img class="tokenImage" src="skool logo.png" alt="Placid Palms" />
+        <img class="tokenImage" src="assets/skool logo.png" alt="Placid Palms" />
         <div class="content">
             <p class="store-name">Skool Community</p>
             <h2>Placid Palms</h2>
